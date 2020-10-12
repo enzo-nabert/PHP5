@@ -7,7 +7,8 @@
     <body>
         <?php
             foreach ($tab_v as $v){
-                echo "<a href='routeur.php?action=read&immat={$v->getImmatriculation()}'> Immatriculation: {$v->getImmatriculation()} </a> <a style='color: #ff0000' href='index.php?action=delete&immat={$v->getImmatriculation()}'>SUPPRIMER</a><br>";
+                $immat = htmlspecialchars($v->getImmatriculation());
+                echo "<a href='routeur.php?action=read&immat={$v->getImmatriculation()}'> Immatriculation: $immat</a> <a style='color: #ff0000' href='index.php?action=delete&immat={$v->getImmatriculation()}'>SUPPRIMER</a><br>";
             }
         ?>
     </body>

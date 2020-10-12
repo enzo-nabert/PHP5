@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-        echo "Immatriculation: {$v->getImmatriculation()} , Marque: {$v->getMarque()} , Couleur: {$v->getCouleur()}";
+        echo htmlspecialchars("Immatriculation: {$v->getImmatriculation()}) , Marque: {$v->getMarque()} , Couleur: {$v->getCouleur()}");
         ?>
     </body>
 </html>
