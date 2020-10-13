@@ -61,8 +61,9 @@ class ModelVoiture {
       // Préparation de la requête
       $req_prep = Model::$pdo->prepare($sql);
 
+      $immatHtmlspecial = htmlspecialchars($immat);
       $values = array(
-          "nom_tag" => $immat,
+          "nom_tag" => $immatHtmlspecial,
           //nomdutag => valeur, ...
       );
       // On donne les valeurs et on exécute la requête
