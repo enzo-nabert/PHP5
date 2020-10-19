@@ -38,7 +38,8 @@ class ControllerVoiture {
             $view = 'error';
             require File::build_path(array('view','view.php'));
         }else {
-            self::readAll();
+            require File::build_path(array('view','voiture','created.php'));
+            ControllerVoiture::readAll();
         }
     }
 

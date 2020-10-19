@@ -60,10 +60,8 @@ class ModelVoiture {
       $sql = "SELECT * from voiture WHERE immatriculation=:nom_tag";
       // Préparation de la requête
       $req_prep = Model::$pdo->prepare($sql);
-
-      $immatHtmlspecial = htmlspecialchars($immat);
       $values = array(
-          "nom_tag" => $immatHtmlspecial,
+          "nom_tag" => $immat,
           //nomdutag => valeur, ...
       );
       // On donne les valeurs et on exécute la requête
